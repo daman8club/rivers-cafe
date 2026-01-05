@@ -7,3 +7,6 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
+
+// build fix check
