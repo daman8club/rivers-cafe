@@ -1,26 +1,67 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FBF8F3;
+  --foreground: #1A0E0A;
+  --coffee-dark: #1A0E0A;
+  --coffee-medium: #3C2415;
+  --coffee-light: #8B4513;
+  --cream: #FBF8F3;
+  --cream-dark: #F5F0E8;
+  --accent-gold: #D4AF37;
+  --accent-copper: #B87333;
+  --accent-green: #228B22;
+  --accent-red: #DC143C;
+  --accent-blue: #4169E1;
+  --accent-orange: #FF8C00;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-coffee-dark: var(--coffee-dark);
+  --color-coffee-medium: var(--coffee-medium);
+  --color-coffee-light: var(--coffee-light);
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
+  --color-accent-gold: var(--accent-gold);
+  --color-accent-copper: var(--accent-copper);
+  --color-accent-green: var(--accent-green);
+  --color-accent-red: var(--accent-red);
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-orange: var(--accent-orange);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+.font-playfair {
+  font-family: var(--font-playfair), serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.coffee-texture {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(184, 115, 51, 0.1) 0%, transparent 50%);
+}
+
+@keyframes steam {
+  0%, 100% { opacity: 0.3; transform: translateY(0) scale(1); }
+  50% { opacity: 0.8; transform: translateY(-10px) scale(1.1); }
 }
