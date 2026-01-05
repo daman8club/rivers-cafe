@@ -1,12 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  experimental: {
-    turbo: false,
-  },
+  /* No experimental or turbo here */
 };
 
 export default nextConfig;
-
-
-// build fix check
